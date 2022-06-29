@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration status="INFO">
+
+    <Appenders>
+        <!-- 콜솔 -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout charset="UTF-8" pattern="%d{hh:mm:ss} %5p [%c] %m%n"/>
+        </Console>
+    </Appenders>
+
+    <loggers>
+        <logger name="org.springframework" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+<!--            sql테스트 하는데 오류찾기 힘들어 래밸을 info로 낮춤 -->
+        </logger>
+
+        <logger name="com.ldj" level="INFO" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+
+        <logger name="com.ldj.mapper" level="TRACE" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+<!--        mapper 확인을 위한 로그 설정-->
+
+        <root level="INFO" additivity="false">
+            <AppenderRef ref="console"/>
+        </root>
+
+    </loggers>
+
+</configuration>
