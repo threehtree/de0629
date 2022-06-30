@@ -70,6 +70,13 @@ dependencies {
     implementation 'org.mybatis:mybatis-spring:2.0.7'
 
 //----------------여기까지 기본 설정-------------------------------
+    //JSTL //jsp에서 조건문 등을 사용하기 위해
+    // https://mvnrepository.com/artifact/jstl/jstl
+    implementation 'jstl:jstl:1.2'
+
+    //Model Mapper //VO를 DTO형식으로 변환하기 위해[조금만달라져도 못 쓰긴함]
+    // https://mvnrepository.com/artifact/org.modelmapper/modelmapper
+    implementation 'org.modelmapper:modelmapper:3.1.0'
 
 }
 

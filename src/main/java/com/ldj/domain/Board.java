@@ -11,14 +11,14 @@ import java.time.LocalDateTime;
 @ToString //ToString 메서드 생성
 @Builder //Builder 디자인패턴 생성
 public class Board {
-    private int bno;
+    private Integer bno;
     private String title;
     private String content;
     private String writer;
 
     //일자,시간
     private LocalDateTime regDate;
-    private LocalDateTime upDate;
+    private LocalDateTime updateDate;
 
 
 

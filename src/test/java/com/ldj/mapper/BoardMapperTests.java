@@ -1,5 +1,6 @@
 package com.ldj.mapper;
 
+import com.ldj.domain.Board;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -20,5 +21,14 @@ public class BoardMapperTests {
         log.info("------------------------------");
         log.info(boardMapper.getClass().getName());
         log.info(boardMapper.getTime());
+    }
+    @Test
+    public void insert(){
+        Board board = Board.builder()
+                .title("타이틀22")
+                .content("내용")
+                .writer("작성자")
+                .build();
+        boardMapper.insert(board);
     }
 }
